@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Imran Hossain — Supervisor with experience in logistics, corporate operations, restaurant management, and data analysis." />
+  <title>Imran Hossain | Supervisor & Operations Professional</title>
+  <style>
+    :root {
+      --bg: #f5f7fb; --surface: #ffffff; --ink: #172033; --muted: #647084;
+      --line: #e4e9f1; --accent: #0b7b75; --accent-dark: #075e5a;
+      --soft: #e7f5f3; --shadow: 0 18px 55px rgba(25, 43, 69, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.1rem; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: .92rem; }
+    .navlinks a:hover { color: var(--accent); }
+    .menu-btn { display: none; border: 1px solid var(--line); background: white; border-radius: 10px; padding: 8px 12px; font-size: 1rem; }
+    .hero { padding: 78px 0 58px; background: radial-gradient(circle at 85% 15%, #dff4f1 0, transparent 31%), linear-gradient(135deg,#fff 0%,#f5f7fb 75%); }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .8fr; align-items: center; gap: 54px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-dark); background: var(--soft); border: 1px solid #cce9e5; border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.04; letter-spacing: -.06em; margin: 20px 0 16px; }
+    h1 span { color: var(--accent); }
+    .lead { max-width: 650px; color: var(--muted); font-size: 1.12rem; margin: 0 0 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 12px; font-weight: 750; border: 1px solid var(--accent); background: var(--accent); color: white; transition: .2s; }
+    .btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .btn.secondary { background: white; color: var(--ink); border-color: var(--line); }
+    .btn.secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .portrait-card { position: relative; max-width: 390px; margin: 0 auto; }
+    .portrait-frame { background: #102b2b; padding: 12px; border-radius: 28px; box-shadow: var(--shadow); transform: rotate(2deg); }
+    .portrait-frame img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 22%; border-radius: 19px; }
+    .photo-note { position: absolute; bottom: 22px; left: -28px; background: white; border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 14px; padding: 12px 16px; transform: rotate(-3deg); font-weight: 750; }
+    .photo-note small { display: block; color: var(--muted); font-weight: 500; font-size: .78rem; }
+    section { padding: 72px 0; }
+    .section-head { margin-bottom: 28px; }
+    .kicker { color: var(--accent); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.045em; line-height: 1.15; margin: 8px 0 0; }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 26px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px; box-shadow: 0 8px 30px rgba(25,43,69,.035); }
+    .panel p { color: var(--muted); margin: 0 0 14px; }
+    .panel p:last-child { margin-bottom: 0; }
+    .quick-facts { display: grid; gap: 12px; }
+    .fact { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border: 0; }
+    .fact-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: var(--soft); color: var(--accent); flex: 0 0 auto; font-weight: 800; }
+    .fact strong { display: block; font-size: .94rem; }
+    .fact span { display: block; color: var(--muted); font-size: .88rem; }
+    .timeline { display: grid; gap: 16px; }
+    .job { display: grid; grid-template-columns: 170px 1fr; gap: 22px; padding: 24px; background: white; border: 1px solid var(--line); border-radius: 18px; }
+    .job-date { color: var(--accent-dark); font-weight: 800; font-size: .9rem; }
+    .job h3 { margin: 0; font-size: 1.16rem; letter-spacing: -.02em; }
+    .company { color: var(--muted); font-weight: 650; margin: 3px 0 10px; }
+    .job p { margin: 0; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag { border: 1px solid #dce8e7; background: white; color: #38515a; border-radius: 999px; padding: 8px 12px; font-size: .88rem; font-weight: 650; }
+    .skills-box { display: grid; gap: 18px; }
+    .skill-group h3 { font-size: 1rem; margin: 0 0 10px; }
+    .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .edu-card { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .edu-card h3 { font-size: 1.03rem; margin: 0 0 8px; }
+    .edu-card p { color: var(--muted); margin: 0; font-size: .91rem; }
+    .contact-wrap { background: #102b2b; color: white; border-radius: 26px; padding: clamp(26px,5vw,48px); display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .contact-wrap .kicker { color: #7ed5ca; }
+    .contact-wrap p { color: #c5d5d6; }
+    .contact-list { display: grid; gap: 12px; align-content: center; }
+    .contact-item { border: 1px solid rgba(255,255,255,.16); border-radius: 13px; padding: 13px 15px; overflow-wrap: anywhere; }
+    .contact-item small { display: block; color: #9fb8ba; font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+    .contact-item a:hover { color: #7ed5ca; }
+    footer { padding: 28px 0; color: var(--muted); font-size: .85rem; text-align: center; }
+    @media (max-width: 800px) {
+      .hero-grid, .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .hero { padding-top: 50px; }
+      .portrait-card { max-width: 330px; margin-top: 12px; }
+      .job { grid-template-columns: 1fr; gap: 8px; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .navlinks { display: none; position: absolute; top: 69px; left: 0; right: 0; padding: 18px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+      .navlinks.open { display: flex; }
+      .menu-btn { display: inline-flex; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home">IMRAN<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Operations · Logistics · Corporate Support</div>
+        <h1>Imran <span>Hossain</span></h1>
+        <p class="lead">Supervisor and operations professional with experience across Saudi Arabia’s logistics and food-delivery sector, corporate services, restaurant management, and data analysis.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/notifyimran" target="_blank" rel="noopener noreferrer">View LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-frame"><img src="assets/profile.jpg" alt="Portrait of Imran Hossain" /></div>
+        <div class="photo-note">Imran Hossain<small>Supervisor · Jeddah, Saudi Arabia</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">A little about me</div><h2>People, operations, and practical problem-solving.</h2></div>
+      <div class="about-grid">
+        <div class="panel">
+          <p>My professional journey has given me the opportunity to work across different areas of business, from food delivery and logistics to restaurant management, data analysis, and corporate operations.</p>
+          <p>At present, I work in the logistics and food-delivery industry in Saudi Arabia, while also supporting a foreign-investor company with corporate and government-related responsibilities.</p>
+          <p>In my corporate role, I regularly work with Qiwa, Muqeem, Absher, GOSI, and ZATCA. My responsibilities include Iqama issuance and renewal, employee transfers (Kafala), exit-re-entry visas, payroll, quotations, client meetings, and business relationship management.</p>
+          <p>Earlier roles in restaurant and branch management, sales, logistics, and data analysis helped me develop an operational mindset. My time as a Data Analyst at foodpanda strengthened my appreciation for using data to understand problems and support better business decisions.</p>
+          <p>I enjoy working with people, taking responsibility, solving problems, and continuously improving how work gets done. I’m always happy to connect with professionals, exchange knowledge, and explore new opportunities.</p>
+        </div>
+        <aside class="panel quick-facts" aria-label="Professional overview">
+          <div class="fact"><div class="fact-icon">01</div><div><strong>Current base</strong><span>Jeddah, Saudi Arabia</span></div></div>
+          <div class="fact"><div class="fact-icon">02</div><div><strong>Core focus</strong><span>Team supervision and operational coordination</span></div></div>
+          <div class="fact"><div class="fact-icon">03</div><div><strong>Corporate portals</strong><span>Qiwa, Muqeem, Absher, GOSI, ZATCA</span></div></div>
+          <div class="fact"><div class="fact-icon">04</div><div><strong>Industry experience</strong><span>Logistics, food delivery, restaurants, data analysis</span></div></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Career history</div><h2>Work experience</h2></div>
+      <div class="timeline">
+        <article class="job">
+          <div class="job-date">Jun 2026 – Present<br><span style="font-weight:500;color:var(--muted)">Part-time · Hybrid</span></div>
+          <div><h3>Information Technology Support Specialist</h3><div class="company">Noor MTM Company · Jeddah, Saudi Arabia</div>
+            <p>Manage end-to-end corporate operations for investor companies in Saudi Arabia. Work with Qiwa, Muqeem, Absher, GOSI, and ZATCA (VAT/tax) portals; support Iqama issuance and renewals, employee transfers (Kafala), exit-re-entry visas, payroll, quotations, client meetings, and business relationship management.</p></div>
+        </article>
+        <article class="job">
+          <div class="job-date">Feb 2025 – Present<br><span style="font-weight:500;color:var(--muted)">Full-time · On-site</span></div>
+          <div><h3>Supervisor</h3><div class="company">AL BARQ AL ARABI LOGISTICS · Jeddah, Saudi Arabia</div>
+            <p>Supervise food-delivery operations by monitoring live dashboards, assigning tasks, tracking rider performance, and resolving delivery issues. Coordinate teams, support route planning, monitor performance, and help meet daily targets while maintaining reliable, timely customer service.</p></div>
+        </article>
+        <article class="job">
+          <div class="job-date">Jan 2025 – Mar 2025<br><span style="font-weight:500;color:var(--muted)">Full-time · On-site</span></div>
+          <div><h3>Supervisor</h3><div class="company">Haya Manahi Logistics (Keeta) · Jeddah, Saudi Arabia</div>
+            <p>Managed work schedules and performance for a team of approximately 50 car drivers. Helped resolve driver issues and coordinate daily activities to support smooth logistics operations and company objectives.</p></div>
+        </article>
+        <article class="job">
+          <div class="job-date">Sep 2023 – Dec 2024<br><span style="font-weight:500;color:var(--muted)">Full-time · On-site</span></div>
+          <div><h3>Accommodation Supervisor</h3><div class="company">Tomorrow Wealth for Parcel Transport (Hanger Station) · Jeddah, Saudi Arabia</div>
+            <p>Oversaw company accommodation and assets, motivated staff, explained work processes, and collaborated with management to support effective operations.</p></div>
+        </article>
+        <article class="job">
+          <div class="job-date">Oct 2020 – May 2023<br><span style="font-weight:500;color:var(--muted)">Full-time · On-site</span></div>
+          <div><h3>Branch Manager</h3><div class="company">Tasty Treat · Cumilla District, Bangladesh</div>
+            <p>Led fast-food branch operations, customer service, sales, and team performance. Streamlined processes, mentored staff, supported sales growth, and maintained quality control and food-safety standards in a high-volume food-service environment.</p></div>
+        </article>
+        <article class="job">
+          <div class="job-date">Apr 2019 – Jul 2020<br><span style="font-weight:500;color:var(--muted)">Full-time · On-site</span></div>
+          <div><h3>Data Analyst</h3><div class="company">foodpanda · Cumilla District, Bangladesh</div>
+            <p>Worked in data analysis, developing an understanding of how data can be used to identify operational issues and inform business decisions.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">What I bring</div><h2>Skills & expertise</h2></div>
+      <div class="panel skills-box">
+        <div class="skill-group"><h3>Saudi corporate & government services</h3><div class="tags">
+          <span class="tag">Government Relations (GRO)</span><span class="tag">Qiwa</span><span class="tag">Muqeem</span><span class="tag">Absher</span><span class="tag">GOSI</span><span class="tag">ZATCA / VAT & Tax</span><span class="tag">Kafala Transfers</span><span class="tag">Iqama Services</span><span class="tag">Exit-Re-entry Visas</span><span class="tag">Payroll & HR Operations</span><span class="tag">Saudi Labor Compliance</span><span class="tag">Quotations & Proposals</span><span class="tag">Client Relations</span><span class="tag">B2B Meetings</span>
+        </div></div>
+        <div class="skill-group"><h3>Logistics & operations</h3><div class="tags">
+          <span class="tag">Third-Party Logistics (3PL)</span><span class="tag">Operational Dashboards</span><span class="tag">Team Coordination</span><span class="tag">Duty & Schedule Management</span><span class="tag">Performance Monitoring</span><span class="tag">Asset Management</span><span class="tag">Inventory Control</span><span class="tag">Stock Management</span><span class="tag">Problem Solving</span>
+        </div></div>
+        <div class="skill-group"><h3>Restaurant & people management</h3><div class="tags">
+          <span class="tag">Branch Management</span><span class="tag">Food & Beverage Operations</span><span class="tag">Food Safety</span><span class="tag">HACCP</span><span class="tag">POS Systems</span><span class="tag">Employee Training</span><span class="tag">Team Building</span><span class="tag">Supervisory Skills</span><span class="tag">Personal Grooming</span>
+        </div></div>
+        <div class="skill-group"><h3>Digital & professional</h3><div class="tags">
+          <span class="tag">Data Analysis</span><span class="tag">Microsoft Excel</span><span class="tag">Microsoft Office</span><span class="tag">Microsoft Word</span><span class="tag">General Office Work</span><span class="tag">Time Management</span><span class="tag">Communication</span><span class="tag">Teamwork</span>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Academic background</div><h2>Education</h2></div>
+      <div class="edu-grid">
+        <article class="edu-card"><h3>Bachelor of Arts (B.A.), Political Science</h3><p>Nangalcourt Hasan Memorial Degree College, Cumilla</p><p>2016 – 2022 · Grade: 2.18 / 4.00</p></article>
+        <article class="edu-card"><h3>Higher Secondary Certificate (H.S.C.), Humanities</h3><p>Chota Sarifpur College</p><p>2014 – 2016 · GPA: 3.17 / 5.00</p></article>
+        <article class="edu-card"><h3>Secondary School Certificate (S.S.C.), Business Studies</h3><p>Goiar Bhanga High School</p><p>2009 – 2014 · GPA: 3.75 / 5.00</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-wrap">
+        <div><div class="kicker">Let’s connect</div><h2>Have a professional opportunity or want to connect?</h2><p>I welcome conversations with professionals and organizations across logistics, operations, food service, and corporate support.</p>
+          <a class="btn" href="mailto:imranhossin066@gmail.com">Email me</a>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item"><small>Email</small><a href="mailto:imranhossin066@gmail.com">imranhossin066@gmail.com</a></div>
+          <div class="contact-item"><small>Phone</small><a href="tel:+966553872974">+966 55 3872 974</a></div>
+          <div class="contact-item"><small>Location</small>Al Marwa, Jeddah, Saudi Arabia</div>
+          <div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/notifyimran" target="_blank" rel="noopener noreferrer">linkedin.com/in/notifyimran ↗</a></div>
+          <div class="contact-item"><small>Facebook</small><a href="https://www.facebook.com/share/1CiNdVeKt3/" target="_blank" rel="noopener noreferrer">Visit Facebook profile ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Imran Hossain · Professional Portfolio</div></footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navlinks = document.getElementById('navlinks');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navlinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+  navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
